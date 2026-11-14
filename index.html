@@ -75,6 +75,14 @@
     .jahre { color: var(--tuerkis); font-weight: 600; }
     .rolle { font-weight: 600; }
     .betrieb { color: var(--grau); font-size: 0.95rem; }
+    .betrieb a { color: var(--blau); text-decoration: none; border-bottom: 1px solid var(--linie); }
+    .betrieb a:hover { color: var(--tuerkis); border-bottom-color: var(--tuerkis); }
+    .aufgaben { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 24px; margin-top: 6px; }
+    .aufgaben li { position: relative; padding-left: 22px; }
+    .aufgaben li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 9px; height: 9px; border-radius: 50%; background: var(--tuerkis); }
+    .zitat { background: var(--hell); border-left: 4px solid var(--tuerkis); border-radius: 0 8px 8px 0; padding: 16px 20px; margin-bottom: 14px; }
+    .zitat p { font-style: italic; margin-bottom: 6px; }
+    .zitat footer { background: none; padding: 0; text-align: left; color: var(--grau); font-size: 0.88rem; }
     .kompetenzen { display: flex; flex-wrap: wrap; gap: 10px; }
     .kompetenzen span {
       background: var(--hell); color: var(--blau);
@@ -101,6 +109,7 @@
     @media (max-width: 600px) {
       h1 { font-size: 1.6rem; }
       .stationen li { grid-template-columns: 1fr; gap: 4px; }
+      .aufgaben { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -119,6 +128,19 @@
       <h2>Über mich</h2>
       <p>Ich bin diplomierte Pflegefachfrau HF mit über 30 Jahren Berufserfahrung in Akutpflege, Rehabilitation und Langzeitpflege. Seit rund zwei Jahren arbeite ich als Medizinische Praxisassistentin in den Bereichen Frauenmedizin und Dermatologie – von der Sprechstundenassistenz über das Praxislabor bis zur administrativen Patientenbetreuung.</p>
       <p>Eine vielseitige Tätigkeit nahe bei den Patientinnen und Patienten und die Zusammenarbeit in einem interdisziplinären Team sprechen mich besonders an. Ich suche eine Anstellung mit einem Pensum von 40 % in der Region Basel.</p>
+    </section>
+
+    <section id="aufgaben">
+      <h2>Meine aktuellen Aufgaben</h2>
+      <p>In der Arztpraxis für Frauenmedizin und Dermatologie übernehme ich selbstständig:</p>
+      <ul class="aufgaben">
+        <li>Sprechstundenassistenz und Unterstützung bei Untersuchungen und Behandlungen</li>
+        <li>Telefonische Sprechstunde</li>
+        <li>Praxislabor</li>
+        <li>Empfang und administrative Patientenbetreuung</li>
+        <li>Regelmässige Einsätze im Ambulatorium</li>
+        <li>Führen elektronischer Krankengeschichten</li>
+      </ul>
     </section>
 
     <!-- VIDEO: Sobald das Vorstellungsvideo auf YouTube liegt, VIDEO_ID ersetzen und die beiden Kommentarzeilen (diese und die Zeile nach </section>) löschen.
@@ -140,33 +162,50 @@
         </li>
         <li>
           <span class="jahre">2023 – 2024</span>
-          <div><div class="rolle">Dipl. Pflegefachfrau HF</div><div class="betrieb">Salmen Park, Altersheim</div></div>
+          <div><div class="rolle">Dipl. Pflegefachfrau HF</div><div class="betrieb"><a href="https://www.salmenpark.tertianum.ch" target="_blank" rel="noopener">Salmen Park</a>, Altersheim</div></div>
         </li>
         <li>
           <span class="jahre">2016 – 2023</span>
-          <div><div class="rolle">Dipl. Pflegefachfrau HF</div><div class="betrieb">Klinik Barmelweid, Kardiologische Rehabilitation</div></div>
+          <div><div class="rolle">Dipl. Pflegefachfrau HF</div><div class="betrieb"><a href="https://www.barmelweid.ch" target="_blank" rel="noopener">Klinik Barmelweid</a>, Kardiologische Rehabilitation</div></div>
         </li>
         <li>
           <span class="jahre">2015 – 2016</span>
-          <div><div class="rolle">Dipl. Pflegefachfrau</div><div class="betrieb">Universitätsspital Basel, Traumatologie</div></div>
+          <div><div class="rolle">Dipl. Pflegefachfrau</div><div class="betrieb"><a href="https://www.unispital-basel.ch" target="_blank" rel="noopener">Universitätsspital Basel</a>, Traumatologie</div></div>
         </li>
         <li>
           <span class="jahre">2008 – 2015</span>
-          <div><div class="rolle">Stv. Abteilungsleiterin</div><div class="betrieb">Alters- und Pflegeheim Zum Park, Muttenz · Führung und Berufsbildung</div></div>
+          <div><div class="rolle">Stv. Abteilungsleiterin</div><div class="betrieb"><a href="https://www.alterswohnen-muttenz.ch" target="_blank" rel="noopener">Alters- und Pflegeheim Zum Park</a>, Muttenz · Führung und Berufsbildung</div></div>
         </li>
         <li>
           <span class="jahre">2005 – 2008</span>
-          <div><div class="rolle">Dipl. Pflegefachfrau HF</div><div class="betrieb">Alters- und Pflegeheim Stiftung Nägelin, Pratteln</div></div>
+          <div><div class="rolle">Dipl. Pflegefachfrau HF</div><div class="betrieb"><a href="https://www.naegelin-stiftung.ch" target="_blank" rel="noopener">Alters- und Pflegeheim Stiftung Nägelin</a>, Pratteln</div></div>
         </li>
         <li>
           <span class="jahre">1996 – 2005</span>
-          <div><div class="rolle">Dipl. Pflegefachfrau</div><div class="betrieb">Bürgerspital Basel</div></div>
+          <div><div class="rolle">Dipl. Pflegefachfrau</div><div class="betrieb"><a href="https://www.bsb.ch" target="_blank" rel="noopener">Bürgerspital Basel</a></div></div>
         </li>
         <li>
           <span class="jahre">1991 – 1996</span>
           <div><div class="rolle">Dipl. Pflegefachfrau</div><div class="betrieb">Alters- und Pflegeheim La Charmille, Riehen</div></div>
         </li>
       </ul>
+    </section>
+
+    <section id="zeugnisse">
+      <h2>Stimmen aus meinen Arbeitszeugnissen</h2>
+      <blockquote class="zitat">
+        <p>«Sie war äusserst initiativ und setzte sich überdurchschnittlich für das Wohlergehen der Patientinnen und Patienten ein.»</p>
+        <footer>Klinik Barmelweid · Arbeitszeugnis 2016 – 2023</footer>
+      </blockquote>
+      <blockquote class="zitat">
+        <p>«Sie verhielt sich loyal, vorbildlich und hilfsbereit und wurde von allen sehr geschätzt.»</p>
+        <footer>Universitätsspital Basel · Arbeitszeugnis vom 31.01.2016</footer>
+      </blockquote>
+      <blockquote class="zitat">
+        <p>«Frau Baltic verfügt über ein sehr gutes und fundiertes Fachwissen, welches sie erfolgreich in die Praxis umsetzt.»</p>
+        <footer>Alters- und Pflegeheim Zum Park, Muttenz · Zwischenzeugnis vom 31.08.2013</footer>
+      </blockquote>
+      <p class="hinweis">Die vollständigen Zeugnisse finden Sie unter «Anlagen und Nachweise».</p>
     </section>
 
     <section id="kompetenzen">
