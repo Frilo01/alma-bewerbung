@@ -80,6 +80,7 @@
       transition: background 0.2s;
     }
     .button:hover { background: var(--tuerkis); }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; }
     .hinweis { color: var(--grau); font-size: 0.9rem; margin-top: 12px; }
     .kontakt a { color: var(--blau); text-decoration: none; }
     .kontakt a:hover { text-decoration: underline; }
@@ -175,8 +176,11 @@
     <section id="bewerbung">
       <h2>Bewerbungsunterlagen</h2>
       <p>Motivationsschreiben und Lebenslauf als PDF:</p>
-      <a class="button" href="bewerbung.pdf" target="_blank">Bewerbung als PDF öffnen</a>
-      <p class="hinweis">Zeugnisse und Diplome sende ich Ihnen gerne auf Anfrage zu.</p>
+      <div class="buttons">
+        <a class="button" href="bewerbung.pdf" target="_blank">Bewerbung als PDF öffnen</a>
+        <a class="button" href="Alma_Baltic_Bewerbung_mit_Anlagen_Nov_2026.pdf" download="Alma_Baltic_Bewerbung_mit_Anlagen (Nov. 2026).pdf">Anlagen und Nachweise</a>
+      </div>
+      <p class="hinweis">«Anlagen und Nachweise» enthält das gesamte Dossier: Bewerbung mit Diplom, Arbeitszeugnissen und Kursbestätigungen (31 Seiten, Stand November 2026).</p>
     </section>
 
     <section id="kontakt" class="kontakt">
